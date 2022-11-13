@@ -6,7 +6,18 @@ $font-color: #ffffff;
 
 @import '~loaders.css/src/animations/line-scale-pulse-out-rapid.scss';
 
+@font-face {
+    font-family: 'Noveo Sans';
+    src: url('./assets/fonts/NoveoSansBlack.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Sana Sans';
+    src: url('./assets/fonts/SanaSansAltLight.ttf') format("truetype");
+}
+
 .App {
   padding: 50px;
-  height: 80vh;
+  justify-content: center;
+  display: flex;
 }

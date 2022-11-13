@@ -1,6 +1,8 @@
 import React from 'react'
 import './index.scss'
 import Logo from '../../assets/images/rapptr.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Login = () =>
 {
@@ -13,12 +15,19 @@ const Login = () =>
                 <div className='input-container'>
                     <div className='email'>
                         <h2 className='email-label'>Email</h2>
-                        <input type='text' placeholder='user@rapptrlabs.com' />
+                        <div className='input-box'>
+                            <FontAwesomeIcon icon={faUser} color='#0b141d' />
+                            <input type='text' placeholder='user@rapptrlabs.com' />
+                        </div>
                     </div>
                     <div className='password'>
                         <h2 className='password-label'>Password</h2>
-                        <input  placeholder='Must be at least 4 characters'/>
+                        <div className='input-box'>
+                            <FontAwesomeIcon icon={faLock} color='#0b141d' />
+                            <input type='password' placeholder='Must be at least 4 characters' />
+                            </div>
                     </div>
+                    <button type='submit' className='login-button'>Login</button>
                 </div>
             </div>
         </div>
