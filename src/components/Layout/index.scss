@@ -1,0 +1,51 @@
+$base-color: #0b141d;
+$accent-color: #3ec7f4;
+$font-color: #ffffff;
+
+.container {
+    will-change: contents;
+    transform-style: preserve-3d;
+    animation: fadeIn 1s forwards;
+}
+
+.login-container {
+    color: $font-color;
+    display: flex;
+    position: relative;
+    top: 5vh;
+    justify-content: center;
+
+    .login {
+        display: flex;
+        width: 300px;
+        height: 300px;
+        flex-direction: column;
+        border: 1px solid $font-color;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 5vh;
+
+        .logo-image {
+            width: 150px;
+            align-self: center;
+            padding: 25px;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            
+            h2 {
+                font-size: 12px;
+                padding: 0;
+                margin: 0;
+            }
+
+            .email,
+            .password {
+                padding: 5px;
+            }
+        }
+    }
+}

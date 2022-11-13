@@ -1,0 +1,12 @@
+$base-color: #0b141d;
+$accent-color: #3ec7f4;
+$font-color: #ffffff;
+
+@import 'animate.css';
+
+@import '~loaders.css/src/animations/line-scale-pulse-out-rapid.scss';
+
+.App {
+  padding: 50px;
+  height: 80vh;
+}
