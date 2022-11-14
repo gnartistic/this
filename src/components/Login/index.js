@@ -50,7 +50,7 @@ const Login = () =>
                 {/* email input container */}
                     <div className='email'>
                         <h2 className='email-label'>Email</h2>
-                        <div className='input-box'>
+                        <div className='input-box' style={{border:  errorMessage ? '2px solid #f20d17': '' }}>
                             <FontAwesomeIcon icon={faUser} color='#3a8ebc' />
                             <input type='email' name='email' onBlur={handleChange} placeholder='user@rapptrlabs.com' />
                         </div>
