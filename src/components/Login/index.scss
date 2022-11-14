@@ -1,0 +1,162 @@
+$base-color: #0b141d;
+$accent-color: #3ec7f4;
+$font-color: #ffffff;
+
+.container {
+    will-change: contents;
+    transform-style: preserve-3d;
+    animation: fadeIn 1.5s forwards;
+}
+
+.login-container {
+    color: $font-color;
+    display: flex;
+    justify-content: center;
+    padding: 70px 0;
+
+    .login {
+        display: flex;
+        width: 300px;
+        height: 400px;
+        flex-direction: column;
+        border: 1px solid $font-color;
+        border-radius: 10px;
+        padding: 20px;
+
+        .login-title {
+            font-family: 'Noveo Sans';
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .labs {
+                padding: 9px 0 0 9px;
+            }
+
+            .logo-image {
+                width: 150px;
+            }
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25px;
+
+            .error-text {
+                position: absolute;
+                color: #f20d17;
+                font-family:'Sana Sans';
+                font-weight: bold;
+                font-size: 12px;
+                margin: 5px 0 0 0;
+                padding: 0 0 0 0;
+                animation: headShake .8s forwards;
+            }
+
+            h2 {
+                font-size: 12px;
+                padding: 2px;
+                margin: 0;
+            }
+            .password{
+
+                margin-top: 30px;
+            }
+            .email,
+            .password {
+
+                .fa-user {
+                    padding: 8px 5px 0 0;
+                }
+
+                .fa-lock {
+                    padding: 9px 5px 0 0;
+                }
+
+                .input-box {
+                    background-color: $font-color;
+                    border-radius: 5px;
+                    padding: 5px 5px 5px 10px;
+                }
+
+                input[type='email'],
+                input[type='password'] {
+                    width: 180px;
+                    height: 30px;
+                    border: none;
+                    font-family: 'Sana Sans';
+                    font-weight: 600;
+                    background: transparent;
+
+
+                    &::placeholder {
+                        font-size: 12px;
+                        font-family: 'Sana Sans';
+                        font-weight: 600;
+                        letter-spacing: .5px;
+                    }
+
+                    &:focus {
+                        font-family: 'Sana Sans';
+                        background-color: transparent;
+                        outline-color: transparent;
+                        outline-style: hidden;
+                        outline-width: 0;
+                    }
+                }
+            }
+
+            .login-button {
+                padding: 10px;
+                width: 200px;
+                margin-top: 25px;
+                font-size: 16px;
+                font-family: 'Sana Sans';
+                font-weight: bold;
+                letter-spacing: .5px;
+                background-color: transparent;
+                border: 1px solid $font-color;
+                color: $font-color;
+                border-radius: 5px;
+                transition: transform .2s;
+
+                &:hover {
+                    color: $base-color;
+                    background: $font-color;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .login-container {
+        height: 600px;
+        overflow: hidden;
+        position: sticky;
+        bottom: 50px;
+
+        .login {
+            height: 500px;
+            width: 80vw;
+
+            .input-container {
+                margin-top: 40px;
+
+                .email,
+                .password {
+                    padding: 15px;
+
+                .login-button {
+                    padding: 10px;
+                    width: 215px;
+                }
+            }
+        }
+    }
+}
+}
