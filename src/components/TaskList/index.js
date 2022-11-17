@@ -4,7 +4,9 @@ import './index.scss'
 const Tasks = () =>
 {
     return (
-        <div>Tasks</div>
+        <div className='container task-page'>
+            <h1>To-Do List</h1>
+        </div>
     )
 }
 
