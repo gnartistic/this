@@ -5,14 +5,14 @@
   
   https://gnartistic.github.io/this/  
 
-  <img src="./ReadMeAssets/login.png" alt="home-page" width="600"/>
-  <img src="./ReadMeAssets/emailError.png" alt="about-page" width="600"/>
-  <img src="./ReadMeAssets/passwordError.png" alt="contact-page" width="600"/>
-  <img src="./ReadMeAssets/serverError.png" alt="skills-page" width="600"/>
-  <img src="./ReadMeAssets/newTask.png" alt="contact-page" width="600"/>
-  <img src="./ReadMeAssets/todoList.png" alt="works-page" width="600"/>
-  <img src="./ReadMeAssets/search1.png" alt="skills-page" width="600"/>
-  <img src="./ReadMeAssets/searchError.png" alt="works-page" width="600"/>
+  <img src="./readMeAssets/login.png" alt="home-page" width="600"/>
+  <img src="./readMeAssets/emailError.png" alt="about-page" width="600"/>
+  <img src="./readMeAssets/passwordError.png" alt="contact-page" width="600"/>
+  <img src="./readMeAssets/serverError.png" alt="skills-page" width="600"/>
+  <img src="./readMeAssets/newTask.png" alt="contact-page" width="600"/>
+  <img src="./readMeAssets/todoList.png" alt="works-page" width="600"/>
+  <img src="./readMeAssets/search1.png" alt="skills-page" width="600"/>
+  <img src="./readMeAssets/searchError.png" alt="works-page" width="600"/>
 
 
   ## Description
