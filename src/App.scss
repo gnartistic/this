@@ -16,8 +16,8 @@ $font-color: #ffffff;
     src: url('./assets/fonts/SanaSansAltLight.ttf') format("truetype");
 }
 
-.App {
-  padding: 50px;
-  justify-content: center;
-  display: flex;
-}
+        .container {
+          will-change: contents;
+          transform-style: preserve-3d;
+          animation: fadeIn 1.5s forwards;
+        }
