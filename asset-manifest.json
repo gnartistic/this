@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/this/static/css/main.b6b3e7cd.css",
+    "main.js": "/this/static/js/main.92f57ed1.js",
+    "static/media/SanaSansAltLight.ttf": "/this/static/media/SanaSansAltLight.62f83200265784304855.ttf",
+    "static/media/NoveoSansBlack.ttf": "/this/static/media/NoveoSansBlack.438a0591427e4858d180.ttf",
+    "index.html": "/this/index.html",
+    "main.b6b3e7cd.css.map": "/this/static/css/main.b6b3e7cd.css.map",
+    "main.92f57ed1.js.map": "/this/static/js/main.92f57ed1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6b3e7cd.css",
+    "static/js/main.92f57ed1.js"
+  ]
+}
