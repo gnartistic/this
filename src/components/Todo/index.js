@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import React, { useState, useEffect } from 'react'
+import Loader from 'react-loaders'
 import Task from './Task'
 import './index.scss'
 import TaskForm from './TaskForm';
@@ -8,7 +9,11 @@ import { useNavigate } from "react-router-dom";
 
 const Todo = () =>
 {
-    const [ search, setSearch ] = useState( '' );
+    const [ search, setSearch ] = useState( {
+        query: '',
+        list: []
+    } );
+
     const [ task, setTask ] = useState( "" );
     const [ tasks, setTasks ] = useState( [] );
     const [ nwTask, setNwTask ] = useState( '' );
@@ -52,9 +57,22 @@ const Todo = () =>
         localStorage.setItem( "localTasks", JSON.stringify( deleted ) )
     }
 
+    const handleChange = ( e ) =>
+    {
+        const results = tasks.filter( task =>
+        {
+            if( e.target.value === "" ) return tasks
+            return task.title.toLowerCase().includes( e.target.value.toLowerCase() )
+        } )
+        setSearch( {
+            query: e.target.value,
+            list: results
+        } )
+    }
+
     return (
-        <div className='tasks'>
-        {/* button will navigate back to login page, but unfortunately it does not actually 'log out' 🥲 */}
+        <>        <div className='tasks'>
+            {/* button will navigate back to login page, but unfortunately it does not actually 'log out' 🥲 */}
             <button className='logout-button container' onClick={navigateToLogin}>Logout</button>
             <div className='task-page'>
                 <h1>To-Do List</h1>
@@ -64,7 +82,8 @@ const Todo = () =>
                         {/* search bar 🔎 */}
                         <div className='searchbar'>
                             <FontAwesomeIcon icon={faMagnifyingGlass} color="#0b141d" />
-                            <input className='search' type='search' name='search' defaultValue={search} placeholder='search' />
+                            <input className='search' type='search' name='search'
+                                onChange={handleChange} value={search.query} placeholder='search' />
                         </div>
 
                         <button className='new-button' onClick={() =>
@@ -85,11 +104,25 @@ const Todo = () =>
                         {nwTask === 'true' && <TaskForm task={task} addTask={addTask} setTask={setTask} />}
 
                         {/* if there's any tasks, they will be rendered here, also have to pass handleDelete function and nwTask state to 'edit' existing tasks... more info in component.*/}
-                        {tasks.map( ( task, index ) => <Task task={task} key={index} setNwTask={setNwTask}  handleDelete={handleDelete} nwTask={nwTask} />)}
+                        {!search.query && tasks.map( ( task, index ) => <Task task={task} key={index} setNwTask={setNwTask} handleDelete={handleDelete} nwTask={nwTask} /> )}
+
+                        {search.query && search.list.map( ( task, index ) =>
+                            <Task task={task} key={index} setNwTask={setNwTask} handleDelete={handleDelete} nwTask={nwTask} />
+                        )}
+                        {/* server error message */}
+                        <div className='search-error'>
+                            {( search.query === '' ? "" : !search.list.length ? "Your search did not return any results" : search.list.map( post =>
+                            {
+                                return <p key={task.title}>{task.title}</p>
+                            } ) )}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+            <Loader type="line-scale-pulse-out-rapid" />
+        </>
+
     )
 }
 

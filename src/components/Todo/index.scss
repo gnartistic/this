@@ -42,6 +42,14 @@
             border-radius: 10px;
             padding-bottom: 10px;
 
+            .task-body {
+            .search-error {
+                        font-family: 'Noveo Sans';
+                        padding-left: 10px;
+                        margin-top: 20px;
+                }
+            }
+
             .task-header {
                 display: flex;
                 flex-direction: row;

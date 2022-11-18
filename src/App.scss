@@ -7,17 +7,54 @@ $font-color: #ffffff;
 @import '~loaders.css/src/animations/line-scale-pulse-out-rapid.scss';
 
 @font-face {
-    font-family: 'Noveo Sans';
-    src: url('./assets/fonts/NoveoSansBlack.ttf') format("truetype");
+  font-family: 'Noveo Sans';
+  src: url('./assets/fonts/NoveoSansBlack.ttf') format("truetype");
 }
 
 @font-face {
-    font-family: 'Sana Sans';
-    src: url('./assets/fonts/SanaSansAltLight.ttf') format("truetype");
+  font-family: 'Sana Sans';
+  src: url('./assets/fonts/SanaSansAltLight.ttf') format("truetype");
 }
 
-        .container {
-          will-change: contents;
-          transform-style: preserve-3d;
-          animation: fadeIn 1.5s forwards;
-        }
+.container {
+  will-change: contents;
+  transform-style: preserve-3d;
+  animation: fadeIn 1.5s forwards;
+}
+
+
+.loader-hidden {
+  display: none;
+}
+
+.loader-active {
+  display: flex;
+  position: relative;
+  margin: auto;
+  top: 50vh;
+  left: 2vw;
+  width: 50px;
+  height: 50px;
+  animation: fadeOut 1s 1s;
+  animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 600px) {
+
+  .loader-hidden {
+    display: none;
+  }
+
+  .loader-active {
+    display: flex;
+    position: relative;
+    top: 50vh;
+    left: 5vw;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    animation: fadeOut 1s 1s;
+    animation-fill-mode: forwards;
+  }
+
+}

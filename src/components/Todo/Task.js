@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashCan, faPencil } from '@fortawesome/free-solid-svg-icons';

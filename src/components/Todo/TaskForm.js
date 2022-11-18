@@ -5,7 +5,7 @@ import { faSave } from '@fortawesome/free-solid-svg-icons';
 
 const TaskForm = ( { setTask, task, addTask, handleReplace } ) =>
 {
-
+// captures information for new task
     return (
         <form className='task-edit' onSubmit={addTask}>
             <input
@@ -14,7 +14,7 @@ const TaskForm = ( { setTask, task, addTask, handleReplace } ) =>
                 type="text"
                 value={task}
                 maxLength={25}
-                placeholder={task.title}
+                placeholder='Add task...'
                 className="task-input"
                 onChange={( e ) => setTask( e.target.value )}
             />
